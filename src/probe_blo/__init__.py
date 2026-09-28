@@ -1,0 +1,56 @@
+"""PROBE kernel for bilevel optimization with nonconvex lower levels (arXiv:2609.30501)."""
+
+from probe_blo.cg import cg, residual, residual_norm
+from probe_blo.pgd import pgd, uniform_in_ball
+from probe_blo.probe import default_mu_schedule, hypergradient, probe
+from probe_blo.toy import (
+    Oracles,
+    add_mu_I,
+    apply_linear,
+    autodiff_oracles,
+    f,
+    fig1_oracles,
+    g,
+    grad_norm_y,
+    grad_x_f,
+    grad_y_f,
+    grad_y_g,
+    hess_xy_g,
+    hess_yy_g,
+    hypergrad_jvp,
+    hypergrad_vjp,
+    is_fosp,
+    is_sosp,
+    lambda_min_yy,
+    mu_hypergrad,
+)
+
+__all__ = [
+    "Oracles",
+    "add_mu_I",
+    "apply_linear",
+    "autodiff_oracles",
+    "cg",
+    "default_mu_schedule",
+    "f",
+    "fig1_oracles",
+    "g",
+    "grad_norm_y",
+    "grad_x_f",
+    "grad_y_f",
+    "grad_y_g",
+    "hess_xy_g",
+    "hess_yy_g",
+    "hypergrad_jvp",
+    "hypergrad_vjp",
+    "hypergradient",
+    "is_fosp",
+    "is_sosp",
+    "lambda_min_yy",
+    "mu_hypergrad",
+    "pgd",
+    "probe",
+    "residual",
+    "residual_norm",
+    "uniform_in_ball",
+]
